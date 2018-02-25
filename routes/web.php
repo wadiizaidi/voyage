@@ -11,14 +11,38 @@
 |
 */
 
+//use Illuminate\Routing\UrlGenerator;
+
+
 Route::get('/', function () {
+	if(! auth::check())
+	 return redirect()->route('login');
     return view('welcome');
 });
 Route::get('/deposer_voyage',function(){
+	if(! auth::check())
+	 return redirect()->route('login');
 	return view('deposervoyage');
 }
 );
+
+Route::get('/posts/{slug}',function($slug){
+	$route="http://localhost:8000/posts/".auth()->user()->id;
+	
+   if($slug != auth()->user()->id  )
+    	
+     return Redirect::to($route);
+     
+   return view('mesposts'); 
+	
+}
+);
 Route::get('/rechercher_voyage',function(){
+	if(! auth::check())
+	 return redirect()->route('login');
 	return view('recherchervoyage');
 }
 );
+Auth::routes();
+
+Route::post('/posts','PostsController@store')->name('posts');

@@ -65,8 +65,8 @@
                         <li class="active"><a href="/" data-nav-section="home"><span>Accueil</span></a></li>
                         <li><a href="/deposer_voyage" data-nav-section="services"><span>deposer un voyage</span></a></li>
                         <li><a href="/rechercher_voyage" data-nav-section="explore"><span>rechercher un voyage</span></a></li>
-                        <li><a href="#" data-nav-section="testimony"><span>CONNEXION</span></a></li>
-                        <li><a href="#" data-nav-section="blog"><span>inscription</span></a></li>
+                        <li><a href="{{ route('login') }}">Login</a></li>
+                        <li><a href="{{ route('register') }}">register</a></li>
                         <li><a href="#" data-nav-section="faq"><span>FAQ</span></a></li>
                         <li><a href="#" data-nav-section="trusted"><span>LISTE</span></a></li>
                     

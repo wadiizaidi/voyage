@@ -1,4 +1,4 @@
-@extends('Layout')
+@extends('layout.app')
 @section('contenue')
 <section id="fh5co-explore" data-section="explore"style="background-image: url(images/full_image_3.jpg);" data-stellar-background-ratio="0.5">
     
