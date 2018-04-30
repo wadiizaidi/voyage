@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('profile.master')
 
 @section('content')
 <div class="container">
@@ -10,7 +10,7 @@
 
     <div class="row">
 
-       
+         @include('profile.sidebar')
 
 
         <div class="col-md-9">
